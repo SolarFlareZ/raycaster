@@ -18,7 +18,14 @@ import app.mechanics.Screen;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -117,8 +124,11 @@ public class Game {
 		builder.registerTypeAdapter(GameMap.class, deserializer);
 		Gson gson = builder.create();
 
-		Path filePath = Paths.get("Maps.json");
-		String jsonString = Files.readString(filePath);
+		InputStream stream = ClassLoader.getSystemResourceAsStream("Maps.json");
+		String jsonString = convertToString(stream);
+//		Path filePath = Paths.get(uri);
+//		String jsonString = Files.readString(filePath);
+
 		JsonArray jsonElements = gson.fromJson(jsonString, JsonArray.class);
 		if(numberOfLevels == 0) numberOfLevels = jsonElements.size();
 		JsonElement mapElement = jsonElements.get(index);
@@ -310,5 +320,19 @@ public class Game {
 	}
     }
 
+
+
+    private String convertToString(InputStream inputStream) throws IOException {
+	try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))) {
+	    StringBuilder stringBuilder = new StringBuilder();
+	    String line;
+
+	    while ((line = reader.readLine()) != null) {
+		stringBuilder.append(line).append(System.lineSeparator());
+	    }
+
+	    return stringBuilder.toString();
+	}
+    }
 
 }
