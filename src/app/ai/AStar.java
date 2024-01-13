@@ -17,7 +17,6 @@ import java.util.Set;
 /**
  * AStar is a class that implements the A* pathfinding algorithm for navigating a GameMap.
  * The algorithm uses a priority queue and a set to efficiently explore possible paths.
- *
  * @author Oliver Björklund
  * @version 1.0
  */
