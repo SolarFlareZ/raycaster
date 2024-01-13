@@ -13,11 +13,8 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 /**
-* Screen uses JComponent to draw everything in the game. To correctly draw the walls of the game,
-* rays are used to measure distance and get their "types". When drawing objects rays are also used to instruct
-* screen if the object is to be drawn or not.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+* Defines properties for the screen which displays the entire game.
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class Screen extends JComponent
@@ -29,13 +26,7 @@ public class Screen extends JComponent
     private Map<Block, Texture> textureMap;
     private static final Logger LOGGER = Logger.getLogger("GameLogger");
 
-    /**
-     * The constructor for Screen
-     *
-     * @param player the player whos "vision" screen is to show
-     * @param gameMap the map which is to be shown
-     * @param preferredSize	the prefered wize of the screen
-     */
+
     public Screen(final Player player, final GameMap gameMap, final Dimension preferredSize) {
 	this.preferredSize = preferredSize;
 	this.gameMap = gameMap;

@@ -4,12 +4,9 @@ import app.initialization.GameMap;
 
 import java.awt.*;
 /**
-* A ray returns the closest distance from an object to a non-floor tile in the game.
-* To do this one ray tests the x-axis while the other tests the y-axis,
-* the shortest on the two are then returned. Besides distance,
-*  the direction and block-type of the block which was hit is also returned.
-*
- * @author Oliver Björklund, Jonathan Eriksson
+* Defines a ray which is used to measure the distance to solid tiles.
+ * The rays are used to render a 3d screen.
+ * @author Oliver Björklund
  * @version 1.0
  */
 
@@ -26,13 +23,7 @@ public class Ray {
     private Block blockTypeX = null;
     private Block blockTypeY = null;
 
-    /**
-     * The constructor for Ray
-     *
-     * @param currentPos the starting position of the ray
-     * @param angle the angle of the ray
-     * @param gameMap the map which the ray should calculate distances on
-     */
+
     public Ray(final Point currentPos, final double angle, final GameMap gameMap) {
 	this.currentPos = currentPos;
 	this.gameMap = gameMap;

@@ -10,8 +10,7 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 /**
- * Jukebox plays sounds when its called.
- * to do so it needs a string to the audio-file's path.
+ * Creates a playable sound object.
  */
 public class Jukebox {
     private Clip clip = null;

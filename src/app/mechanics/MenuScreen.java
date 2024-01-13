@@ -10,9 +10,9 @@ import java.net.URL;
 import java.util.logging.Logger;
 
 /**
- * MenuScreen shows which selections are possible for the user.
+ * Defines a welcomescreen which allows the user to start the game or quit.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class MenuScreen extends JPanel {
@@ -22,11 +22,6 @@ public class MenuScreen extends JPanel {
     private BufferedImage backgroundImage = null;
     private static final Logger LOGGER = Logger.getLogger("GameLogger");
 
-    /**
-     * The constructor for MenuScreen
-     *
-     * @param compSize the size of the menu screen
-     */
     public MenuScreen(Dimension compSize) {
 	this.preferredSize = compSize;
 
@@ -37,7 +32,6 @@ public class MenuScreen extends JPanel {
 	constraints.anchor = GridBagConstraints.CENTER;
 	constraints.gridwidth = GridBagConstraints.REMAINDER;
 	constraints.insets = new Insets(10, 0, 10, 0);
-
 
 	this.startButton = new JButton("Start Game");
 
@@ -51,6 +45,7 @@ public class MenuScreen extends JPanel {
 	buttons.setOpaque(false);
 
 	add(buttons, constraints);
+
 
 	try {
 	    URL url = ClassLoader.getSystemResource("images/block.jpg");

@@ -8,10 +8,9 @@ import java.awt.*;
 
 /**
 * AbstractInteractables sets the rules for all interactable objects in the game.
-* those include enemies, keys and weapons. The class also keeps track on objects relation to the
-* player.
+* Which includes enemies, keys and weapons.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 
@@ -22,14 +21,7 @@ public abstract class AbstractInteractable implements Interactable
     protected boolean onMap;
     protected Texture texture;
 
-    /**
-     * The constructor for AbstractInteractable
-     *
-     * @param currentPos the Point where the Interactable will spawn
-     * @param size the size of the Interactable
-     * @param onMap sets if the Interactable is to be displayed or not
-     * @param texture the texture that will represent the Interactable
-     */
+
     protected AbstractInteractable(final Point currentPos, final Dimension size, final boolean onMap, Texture texture) {
 	this.currentPos = currentPos;
 	this.size = size;

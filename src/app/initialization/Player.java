@@ -14,11 +14,9 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 /**
-* The player-class is used to create the main-character of the game.
-* in the class movement is taken cared of, as rays are used to create
-* the "vision" of the player, those are also used here.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+* The player-class is used to create the player of the game.
+* The class handles movement and vision of the player.
+ * @author Oliver Björklund
  * @version 1.0
  */
 
@@ -40,12 +38,7 @@ public class Player implements Animate
 
     private static final Logger LOGGER = Logger.getLogger("GameLogger");
 
-    /**
-     * The constructor for Player
-     *
-     * @param game	the game which is to be played as the player
-     * @param gameMap the gameMap on which the player is to exsist
-     */
+
 
     public Player(final Game game, final GameMap gameMap) {
 	final int numberOfRays = 121;
@@ -151,6 +144,7 @@ public class Player implements Animate
 		int mapY = (pos.y + y) / gameMap.getBlockSize().height;
 		if(gameMap.getBlock(mapX, mapY).equals(Block.DOOR) && haskey) {
 		    game.completeLevel();
+		    return true;
 		}
 		Block block = gameMap.getBlock(mapX, mapY);
 		if(block == null) return true;

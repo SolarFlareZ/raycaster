@@ -5,9 +5,9 @@ import app.resourcehandlers.Texture;
 
 import java.awt.*;
 /**
-* All objects the player can interact with has these methods in common.
+* Interface for all interactable objects.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public interface Interactable {

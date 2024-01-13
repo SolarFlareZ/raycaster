@@ -7,23 +7,14 @@ import app.resourcehandlers.Texture;
 
 import java.awt.*;
 /**
-* ShootingEnemy is a basic punchy melee enemy. They can be created with various amont of health and damage.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+ * Defines all the common methods for enemies that shoots, this includes pathfinding
+ * and shooting.
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class ShootingEnemy extends AbstractEnemy
 {
-    /**
-     *	The constuctor of ShootingEnemy
-     *
-     *   @param Point the position of the enemy
-     *   @param size the size of the enemy
-     *   @param onMap sets if the enemy is drawn or not
-     *   @param hp the starting HP of the enemy
-     *   @param damage the damage the enemy deals per hit
-     *   @param texture the texture which is to represent the enemy
-     */
+
     public ShootingEnemy(final Point currentPos, final Dimension size, final boolean onMap, final int hp, final int damage, final Texture texture) {
 	super(currentPos, size, onMap, hp, damage, texture);
     }

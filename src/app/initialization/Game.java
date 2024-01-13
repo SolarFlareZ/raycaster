@@ -29,10 +29,9 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 /**
-*Game works as the "brain" behind the program, it keeps track on all the rules and inputs from the human.
- * It takes no arguments, and creating a game-object results in the game launching
- *
- * @author Oliver Björklund, Jonathan Eriksson
+ * The Game class represents the main game engine, managing the player, game map, enemies, and various screens.
+ * It includes methods for initializing the game, loading maps, handling user input, managing AI, and updating the game state.
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class Game {
@@ -158,6 +157,8 @@ public class Game {
 	in.put(KeyStroke.getKeyStroke("released E"), "srotRight");
 	in.put(KeyStroke.getKeyStroke("ENTER"), "useItem");
 	in.put(KeyStroke.getKeyStroke("TAB"), "toggleMiniMap");
+	in.put(KeyStroke.getKeyStroke("ESCAPE"), "exit");
+
     }
 
     private void createActionMap() {
@@ -180,6 +181,12 @@ public class Game {
 	act.put("select4", new InventoryAction(3));
 	act.put("useItem", new UseItemAction());
 	act.put("toggleMiniMap", new ToggleMiniMapAction());
+	act.put("exit", new AbstractAction() {
+	    @Override
+	    public void actionPerformed(ActionEvent e) {
+		System.exit(0);
+	    }
+	});
     }
 
     private void initAI() {

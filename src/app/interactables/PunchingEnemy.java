@@ -8,11 +8,8 @@ import app.resourcehandlers.Texture;
 import java.awt.*;
 
 /**
- * PunchingEnemy is a melee-enemy that packs a deadly punch.
- * The class uses arguments that can determine its position, size, damage and health to create
- * a variety of enemies.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+ * Defines all common methods for the enemies which doesn't shoot.
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class PunchingEnemy extends AbstractEnemy
@@ -20,16 +17,7 @@ public class PunchingEnemy extends AbstractEnemy
 
     private int reach;
 
-    /**
-     * The constructor of PunchingEnemy
-     *
-     * @param Point the position of the enemy
-     * @param size the size of the enemy
-     * @param onMap sets if the enemy is drawn or not
-     * @param maxHP the starting HP of the enemy
-     * @param damage the damage the enemy deals per hit
-     * @param texture the texture which is to represent the enemy
-     */
+
     public PunchingEnemy(final Point currentPos, final Dimension size, final boolean onMap, final int maxHP, final int damage,
 			 final Texture texture) {
 	super(currentPos, size, onMap, maxHP, damage, texture);

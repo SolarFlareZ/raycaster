@@ -23,9 +23,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * MapDeserializer is used to read maps from a Json-file containing map-data
+ * MapDeserializer is used to deserialize maps from a Json-file containing map-data
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 
@@ -90,8 +90,8 @@ public class MapDeserializer implements JsonDeserializer<GameMap> {
 		case "DAGGER" -> factory.createSword(SwordType.DAGGER, pos, size, true);
 		case "FROSTMOURNE" -> factory.createSword(SwordType.FROSTMOURNE, pos, size, true);
 		case "RED_AMONGUS" -> factory.createEnemy(EnemyType.RED_AMONG_US, pos, size, true);
-		case "LIME_AMONGUS" -> factory.createEnemy(EnemyType.LIME_AMONG_US, pos, size, true);
-		case "CYAN_AMONGUS" -> factory.createEnemy(EnemyType.CYAN_AMONG_US, pos, size, true);
+		case "GHOST" -> factory.createEnemy(EnemyType.GHOST, pos, size, true);
+		case "ALIEN" -> factory.createEnemy(EnemyType.ALIEN, pos, size, true);
 		case "JAVA" -> factory.createEnemy(EnemyType.JAVA, pos, size, true);
 
 		default -> throw new IllegalArgumentException("a");

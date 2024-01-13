@@ -8,10 +8,8 @@ import java.awt.*;
 import java.util.logging.Logger;
 
 /**
-* The mini-map is a top-down representation of the map and the players position.
-* Can be used for debugging when using the engine, or used as a tool in the game to navigate the map.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+* Defines a minimap which displays how the 3d game is rendered using rays.
+ * @author Oliver Björklund
  * @version 1.0
  */
 
@@ -21,13 +19,7 @@ public class MiniMap extends JComponent {
     private Dimension preferredSize;
     private static final Logger LOGGER = Logger.getLogger("GameLogger");
 
-    /**
-     * The constructor for MiniMap
-     *
-     * @param player the player which is to be displayed on the MiniMap
-     * @param gameMap the map which is to be displayed as a MiniMap
-     * @param size the size of the MiniMap
-     */
+
     public MiniMap(final Player player, final GameMap gameMap, final Dimension size) {
 	this.gameMap = gameMap;
 	this.player = player;

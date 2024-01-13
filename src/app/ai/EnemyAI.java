@@ -10,10 +10,9 @@ import app.mechanics.Ray;
 import java.awt.*;
 
 /**
- * EnemyAI provides the game with some difficulty as enemies will now search out the player and start attacking
- * once at the right distance.
+ * EnemyAI controls the enemies using the A* pathfinding algorithm
  *
- *  @author Oliver Björklund, Jonathan Eriksson
+ *  @author Oliver Björklund
  *  @version 1.0
  *
  */
@@ -32,13 +31,7 @@ public class EnemyAI
     private boolean playerVisible;
     private int attackDelay;
 
-    /**
-     * Constructs the EnemyAI object
-     *
-     * @param enemy the enemy which is meant to be controlled by EnemyAI
-     * @param player the player which is meant to be the target of EnemyAI
-     * @param gameMap the map which is meant to be travered by the Enemy
-     */
+
     public EnemyAI(final Enemy enemy, final Player player, final GameMap gameMap) {
 	this.enemy = enemy;
 	this.player = player;
@@ -49,10 +42,7 @@ public class EnemyAI
 	this.aStar = new AStar(gameMap, player, enemy);
     }
 
-    /**
-     * update() updates important values of distance and angle to the player, checks if the player is visible to the AI,
-     * counts the attack delay and calls the method act().
-     */
+
     public void update(){
 
 	if (!enemy.isOnMap()) return;

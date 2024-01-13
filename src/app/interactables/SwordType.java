@@ -3,7 +3,7 @@ package app.interactables;
 /**
  * SwordType contains an enum with all Swords that can be used in the game
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
   */
 

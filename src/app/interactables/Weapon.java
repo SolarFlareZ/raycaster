@@ -7,7 +7,7 @@ import app.initialization.Player;
 /**
  * Weapon extends Interactable by giving object the ability to damage other objects.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public interface Weapon extends Interactable

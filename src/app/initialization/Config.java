@@ -3,7 +3,7 @@ package app.initialization;
 /**
  * Defines public constants FRAME_WIDTH and FRAME_HEIGHT
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 

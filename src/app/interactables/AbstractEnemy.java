@@ -9,9 +9,9 @@ import java.awt.*;
 
 
 /**
-* AbstractEnemy is the parent of all enemies, containing methods and fields that child classes can use.
+ * AbstractEnemy is the abstract class of all enemies, containing methods and fields that child classes can use.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 
@@ -21,16 +21,7 @@ public abstract class AbstractEnemy extends AbstractInteractable implements Enem
     protected HealthBar healthBar;
     protected int hp;
 
-    /**
-     * The constructor for AbstractEnemy
-     *
-     * @param Point the position of the enemy
-     * @param size the size of the enemy
-     * @param onMap sets if the enemy is drawn or not
-     * @param maxHP the starting HP of the enemy
-     * @param damage the damage the enemy deals per hit
-     * @param texture the texture which is to represent the enemy
-     */
+
     protected AbstractEnemy(final Point currentPos, final Dimension size, final boolean onMap, final int maxHP, final int damage,
 			    final Texture texture) {
 	super(currentPos, size, onMap, texture);

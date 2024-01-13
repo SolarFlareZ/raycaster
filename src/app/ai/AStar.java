@@ -15,14 +15,10 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * Astar is a pathfinding algorithm that is less CPU heavy than BFS.
- * Its pathfinding works by checking the distance from both the target and the current node
- * of neighbouring nodes, and then paths to the neighbour with the lowest weighting til it
- * find the target node.
- * <p>
- *     AStar is dependant of Node.
- * </p>
- * @author Oliver Björklund, Jonathan Eriksson
+ * AStar is a class that implements the A* pathfinding algorithm for navigating a GameMap.
+ * The algorithm uses a priority queue and a set to efficiently explore possible paths.
+ *
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class AStar {
@@ -35,13 +31,7 @@ public class AStar {
     private Player player;
     private Enemy enemy;
 
-    /**
-     * Constructs a new Astar object.
-     *
-     * @param gameMap the gameMap that is meant to be navigated
-     * @param player the Player which is the target of the enemy.
-     * @param enemy the enemy which is meant to track the target.
-     */
+
     public AStar(final GameMap gameMap, final Player player, final Enemy enemy) {
 	this.gameMap = gameMap;
 	this.enemy = enemy;
@@ -49,14 +39,7 @@ public class AStar {
 	this.open = new PriorityQueue<>(new NodeComparator());
 	this.closed = new HashSet<>();
     }
-/**
-* tempCondition returns a boolean based on the targetDistance between the player and the argument Point.
- * <p>
- *     used in search()
- * </p>
- *
- * @param path a point of the path
- */
+
 
     private boolean tempCondition(Point path) {
 	final int targetDistance = 20;
@@ -66,9 +49,7 @@ public class AStar {
 	return false;
     }
 
-    /**
-     * updatePath updates the path of the Astar algorithm
-     */
+
 
     public void updatePath() {
 	this.start = new Node(new Point(enemy.getCurrentPos().x, enemy.getCurrentPos().y), null);
@@ -132,17 +113,13 @@ public class AStar {
 	return null;
     }
 
-    /**
-     * pop() removes the last node in path if its larget than 1.
-     */
+
     public Node pop() {
 	if(path.size()>1) return path.removeLast();
 	return null;
     }
 
-    /**
-     * NodeComparator compares the F-value of two nodes
-     */
+
 
     public class NodeComparator implements Comparator<Node> {
 	@Override

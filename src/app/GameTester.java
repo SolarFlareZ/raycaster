@@ -3,9 +3,9 @@ package app;
 import app.initialization.Game;
 
 /**
-* GameTester creates a new game, and is used to test the game-engine. Run this to enjoy the glory.
+* GameTester creates a new game, and is used to run the game.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class GameTester {

@@ -8,26 +8,15 @@ import app.resourcehandlers.Texture;
 import java.awt.*;
 
 /**
- * Gun is class representing all shooting-weapons. It takes 7 arguments. a Point which determines where on the map the gun is spawned.
- * Dimension will set the size of the drawn gun. The boolean onMap is used to determine if its spawned on the map or not.
- * An integer sets its damage, another int sets its cooldown, Texture sets its texture and Jukebox determines its sound-effect.
+ * This class represents all the weapons which is used to shoot.
+ * This means that it handles the act event where bullets are created.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class Gun extends AbstractWeapon
 {
-    /**
-     * The constructor of Gun
-     *
-     * @param currentPos the spawning location of the gun
-     * @param size	the size of the displayed gun
-     * @param onMap	sets if the gun is to be displayed on the map or not
-     * @param damage	the damage of the gun
-     * @param cooldown	the cooldown of the gun
-     * @param texture	the texture which represents the gun
-     * @param sound	the sound that is played when the gun is used
-     */
+
     public Gun(final Point currentPos, final Dimension size, final boolean onMap, int damage, int cooldown, Texture texture,
 	       Jukebox sound) {
 	super(currentPos, size, onMap, damage, cooldown, texture, sound);

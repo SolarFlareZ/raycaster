@@ -9,11 +9,8 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Node is used to check if a certain Point in the map is feasible to use
- * in the pathfinding algorithm Astar. It does so by controlling neighbouring
- * points/coordinates so that the certain node is set to be on a spot thats not a floor-tile.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+ * An A* node which holds g, h and f values and is used with the A* search algorithm.
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class Node {
@@ -23,12 +20,7 @@ public class Node {
     private int fValue;
     private Node parent;
 
-    /**
-     * The constructor of Node
-     *
-     * @param Point A Point of the x and y value of a starting place
-     * @param Node Can be a null value when used in another class.
-     */
+
     public Node(final Point position, Node parent) {
 	this.position = position;
         this.parent = parent;

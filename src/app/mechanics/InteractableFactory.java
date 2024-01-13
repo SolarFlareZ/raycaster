@@ -14,9 +14,9 @@ import app.resourcehandlers.Texture;
 import java.awt.*;
 
 /**
- * InteractableFactory can be used to create different kinds of enemies and weapons in the MapDeserializer
+ * A factory for creating weapons and enemies.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class InteractableFactory {
@@ -51,9 +51,9 @@ public class InteractableFactory {
     public Enemy createEnemy(EnemyType type, Point pos, Dimension size, boolean onMap) {
 	return switch (type) {
 	    case RED_AMONG_US -> new PunchingEnemy(pos, size, onMap, 100, 10, new Texture("images/red_amongus.png"));
-	    case LIME_AMONG_US -> new PunchingEnemy(pos, size, onMap, 40, 30, new Texture("images/lime_amongus.png"));
-	    case CYAN_AMONG_US -> new ShootingEnemy(pos, size, onMap, 700, 10, new Texture("images/cyan_amongus.png"));
-	    case JAVA -> new ShootingEnemy(pos, size, onMap, 2000, 20, new Texture("images/java.png"));
+	    case GHOST -> new PunchingEnemy(pos, size, onMap, 40, 20, new Texture("images/pacman.png"));
+	    case ALIEN -> new ShootingEnemy(pos, size, onMap, 400, 10, new Texture("images/spaceinvader.png"));
+	    case JAVA -> new ShootingEnemy(pos, size, onMap, 500, 20, new Texture("images/java.png"));
 	    default -> throw new IllegalArgumentException("There is no enemy of that type");
 	};
     }

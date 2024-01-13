@@ -6,9 +6,8 @@ import java.awt.*;
 
 /**
  * Defines an interface for animate objects.
- * <p>Defines methods for getting hp, maxhp, damage and position</p>
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 

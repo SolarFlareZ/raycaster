@@ -1,8 +1,8 @@
 package app.mechanics;
 /**
-* Direction contains the used directions of the game. They are used in drawing and movement.
+* An enum that defines directions for movement and vision.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public enum Direction {

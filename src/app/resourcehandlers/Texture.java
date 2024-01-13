@@ -9,8 +9,7 @@ import java.net.URL;
 import java.util.logging.Logger;
 
 /**
- * Texture is used to load textures into the game. Texture(String), the argument String refers to
- * the path of the texture which is to be used, for example "directory/fileName.type"
+ * Creates a usable texture object from a given image.
  */
 public class Texture {
     private int[] pixels;

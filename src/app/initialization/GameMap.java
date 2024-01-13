@@ -16,11 +16,8 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 /**
- * Map is one of the game-engines most important classes,
- * in it you can decide how the map is shaped, how large it is,
- * which enemies stand where, where the player starts and what objects are on the map.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+ * Initializes a map to be rendered on the screen including interactables whic appears.
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class GameMap {
@@ -39,18 +36,7 @@ public class GameMap {
     private Map<Integer, Block> blockMap;
     private static final Logger LOGGER = Logger.getLogger("GameLogger");
 
-    /**
-     * The constructor for GameMap
-     *
-     * @param size 	the size of the map measured in blocks
-     * @param mapDesign	the design of the map
-     * @param blockSize	the size of the maps blocks
-     * @param objects	a list of the objects on the map
-     * @param enemies	a list of all enemies on the map
-     * @param weapons	a list of all weapons on the map
-     * @param key	the key which opens the maps final door
-     * @param startPos	the starting position of the player
-     */
+
     public GameMap(final int size, final int[][] mapDesign, final Dimension blockSize, final List<Interactable> objects,
 		   final List<Enemy> enemies, final List<Weapon> weapons, final Key key, final Point startPos) {
 	this.size = size;

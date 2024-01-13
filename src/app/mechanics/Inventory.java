@@ -9,10 +9,8 @@ import app.resourcehandlers.Texture;
 import java.awt.*;
 
 /**
- * Inventory keeps track on which items the player has picked up
- * When an item is in the inventory it also displays said items cooldown.
- *
- * @author Oliver Björklund, Jonathan Eriksson
+ * Defines the inventory using slots. Which will be displayed to the user.
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class Inventory {
@@ -22,11 +20,7 @@ public class Inventory {
     private Interactable[] items;
     private int selectedSlot;
 
-    /**
-     * The constructor for Inventory
-     *
-     * @param color	the background color of the inventory
-     */
+
     public Inventory(final Color color) {
 	this.slotSize = new Dimension(70, 70);
 	this.color = color;

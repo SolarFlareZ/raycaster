@@ -10,10 +10,9 @@ import app.resourcehandlers.Texture;
 import java.awt.*;
 
 /**
-* The bullet class is used to draw bullets, and to calculate the
-* current position of a bullet.
+* Creates an interactable bullet which is displayed on the screen.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class Bullet extends AbstractInteractable
@@ -22,19 +21,10 @@ public class Bullet extends AbstractInteractable
     private int impactDamage;
     private double angle;
 
-    /**
-     * The constructor for Bullet
-     *
-     * @param currentPosthe starting position of the bullet
-     * @param size	the size of the bullet
-     * @param onMap	sets if the bullet is to be displayed or not
-     * @param shooter	the Animate who shoots
-     * @param impactDamge the damage the bullet causes on impact
-     * @param angle	the angle which the bullet moves at
-     */
+
     public Bullet(final Point currentPos, final Dimension size, final boolean onMap,
 		  Animate shooter, int impactDamage, double angle) {
-	super(currentPos, size, onMap, new Texture("images/red_amongus.png"));
+	super(currentPos, size, onMap, new Texture("images/bullet.png"));
 	this.shooter = shooter;
 	this.impactDamage = impactDamage;
 	this.angle = angle;

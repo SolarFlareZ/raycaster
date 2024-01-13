@@ -3,23 +3,16 @@ package app.mechanics;
 import java.awt.*;
 
 /**
- * Healthbars are drawn over all "Animated" objects. They are used to inform the
- * player about the current health of an enemy/object.
+ * Defines how healthbars should be displayed over animate objects.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public class HealthBar {
     private Dimension size;
     private int maxHP;
 
-    /**
-     * The constructor for HealthBar
-     *
-     * @param x 	the width of the health bar
-     * @param y 	the height of the health bar
-     * @param maxHP	the amount of health it represents
-     */
+
     public HealthBar(int x, int y, int maxHP) {
 	this.size = new Dimension(x, y);
 	this.maxHP = maxHP;

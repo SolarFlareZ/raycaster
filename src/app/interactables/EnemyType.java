@@ -1,13 +1,12 @@
 package app.interactables;
 
 /**
- * EnemyType contains all types of enemies that can be
- * used in a game map
+ * EnemyType contains all types of enemies.
  *
- * @author Oliver Björklund, Jonathan Eriksson
+ * @author Oliver Björklund
  * @version 1.0
  */
 public enum EnemyType {
-    RED_AMONG_US, LIME_AMONG_US, CYAN_AMONG_US,
+    RED_AMONG_US, GHOST, ALIEN,
     JAVA
 }
