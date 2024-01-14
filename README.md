@@ -1,6 +1,6 @@
 # Java Raycaster
 ## Description
-A simple raycasting engine written in Java that simulates a first-person perspective of a 3D environment. It employs raycasting techniques to render walls and objects within the virtual world. The objective of the game is to find the key and take it to the exit while avoiding enemies. To aid you in this task, you can discover weapons that allow you to defend yourself against the enemies.
+A raycasting engine written in Java that simulates a first-person perspective of a 3D environment. It employs raycasting techniques to render walls and objects within the virtual world. The objective of the game is to find the key and take it to the exit while avoiding enemies. To aid you in this task, you can discover weapons that allow you to defend yourself against the enemies.
 
 ## Download
 1. Ensure that you have Java 16 or a newer version installed.
