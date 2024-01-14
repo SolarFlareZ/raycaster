@@ -8,12 +8,12 @@ A simple raycasting engine written in Java that simulates a first-person perspec
 3. Run the JAR file using Java. Alternatively, from the command prompt, use the following command in the directory containing the .jar file: java -jar JavaRayCaster.jar.
 
 ## Controls
-W - Forward
-S - Backwards
-A - Left
-D - Right
-Q - Rotate left
-E - Rotate right
-ENTER - Use item
-TAB - Toggle minimap
-ESCAPE - Exit game
+* W - Forward
+* S - Backwards
+* A - Left
+* D - Right
+* Q - Rotate left
+* E - Rotate right
+* ENTER - Use item
+* TAB - Toggle minimap
+* ESCAPE - Exit game
