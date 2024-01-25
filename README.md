@@ -4,7 +4,7 @@ A raycasting engine written in Java that simulates a first-person perspective of
 The game contains 3 levels and closes when completed.
 
 ## Download
-1. Ensure that you have Java 16 or a newer version installed.
+1. Ensure that you have Java 16 or a newer version installed from Oracles website.
 2. [Click here](https://github.com/SolarFlareZ/raycaster/releases/download/v1.0/JavaRaycaster.jar) to download the application.
 3. Run the JAR file using Java. Alternatively, from the command prompt, use the following command in the directory containing the .jar file: java -jar JavaRayCaster.jar.
 
